@@ -1,0 +1,61 @@
+<com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sticky_scroll"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/tvHeading"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/type_to_search"
+            android:padding="10dp"
+            android:lines="1"
+            android:tag="sticky"
+            android:layout_below="@+id/tvHeading"
+            android:id="@+id/edtSearch"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:background="#F0FFFFFF"
+            android:focusableInTouchMode="false"
+            android:textCursorDrawable="@null"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc"
+            android:layout_below="@id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+
+        <include
+            layout="@layout/layout_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rc"
+            />
+    </RelativeLayout>
+
+</com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
